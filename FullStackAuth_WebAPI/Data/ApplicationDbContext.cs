@@ -7,7 +7,9 @@ namespace FullStackAuth_WebAPI.Data
 {
     public class ApplicationDbContext : IdentityDbContext<User>
     {
-        
+       public DbSet<Recipe> recipes { get; set; }
+        public DbSet<Comment> comments { get; set; }
+        public DbSet<Favorite> favorites { get; set; }
 
         public ApplicationDbContext(DbContextOptions options)
     : base(options)
